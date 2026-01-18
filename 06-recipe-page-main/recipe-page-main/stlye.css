@@ -1,0 +1,177 @@
+:root {
+    /* colors */
+    --white: 0, 0%, 100%;
+
+    --stone-100: 30, 54%, 90%;
+    --Stone-150: 30, 18%, 87%;
+    --Stone-600: 30, 10%, 34%;
+    --Stone-900: 24, 5%, 18%;
+
+    --Brown-800: 14, 45%, 36%;
+
+    --Rose-800: 332, 51%, 32%;
+    --Rose-50: 330, 100%, 95%;
+
+
+    /* font family */
+    --ff-outfit: "Outfit", sans-serif;
+    --ff-young-serif: "Young Serif", serif;
+
+    /* font weight */
+    --fw-regular: 400;
+    --fw-bold: 600;
+    --fw-bolder: 700;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(var(--Rose-50));
+    display: flex;
+    min-height: 100vh;
+    padding: 2rem 1 rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-outfit);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+main {
+    max-width: 600px;
+    width: 100%;
+    background-color: hsl(var(--white));
+    padding: 2rem;
+    border-radius: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+main img {
+    width: 100%;
+    border-radius: inherit;
+}
+
+h1,h2 {
+    font-family: var(--ff-young-serif);
+    font-weight: var(--fw-regular);
+}
+h1 {
+    font-size: 2rem;
+    color: hsl(var(--Stone-900));
+}
+h2 {
+    color: hsl(var(--Brown-800));
+    font-size: 1.4rem;
+}
+
+h3,p {
+    font-family: var(--ff-outfit);
+}
+p{
+    color: hsl(var(--Stone-600));
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+main span {
+    font-weight: var(--fw-bold);
+}
+
+.ingrdients,
+.instruction,
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem    
+}
+
+
+ul, ol {
+    padding-left: 1.25rem;
+}
+.time {
+    background-color: hsl(var(--Rose-50), 0.3);
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+}
+
+
+.time h3 {
+    color:hsl(var(--Rose-800)) ;
+    margin-bottom: 0.5rem;
+}
+.time ul {
+    padding-left: 1.2rem;
+}
+
+.time li::marker {
+    color: hsl(var(--Rose-800));
+}
+.time li {
+    margin-bottom: 0.4rem;
+    color: hsl(var(--Stone-600));
+}
+
+.time span {
+    font-weight: var(--fw-bold);
+    color: hsl(var(--Stone-900)) ;
+}
+
+.ingrdients ul {
+    padding-left: 1.2rem;
+}
+.ingrdients li {
+    margin-bottom: 0.5rem;
+    color: hsl(var(--Stone-600));
+}
+
+.instruction ol {
+    padding-left: 1.2rem;
+}
+.instruction li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: hsl(var(--Stone-600));
+}
+
+.instruction span {
+    font-weight: var(--fw-bold);
+    color: hsl(var(--Stone-900));
+}
+
+.ingrdients li::marker,
+.instruction li::marker {
+    color:hsl(var(--Brown-800));
+    font-weight: var(--fw-bold);
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition caption {
+    text-align: left;
+    margin-block: 1rem;
+    color: hsl(var(--Stone-600));
+}
+
+.nutrition td {
+    padding: 0.6rem 0rem 0.6rem 1.5rem;
+    border-bottom: 1px solid hsl(var(--Brown-800), 0.3);
+}
+
+.nutrition td:last-child {
+    color: hsl(var(--Brown-800));
+    font-weight: var(--fw-bold);
+}
